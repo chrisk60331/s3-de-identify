@@ -1,0 +1,6 @@
+FROM python:3.9.16-bullseye
+
+RUN apt-get install cmake coreutils
+RUN python3 install -r requirements.txt
+
+ENTRYPOINT ["python3", "get_test_data.py"]
